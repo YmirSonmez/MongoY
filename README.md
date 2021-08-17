@@ -1,6 +1,9 @@
 # MongoY
 Simple Mongo API
 
+### Java Docs
+https://ymirsonmez.github.io/MongoY/
+
 ### Usage
 
 ```JAVA
