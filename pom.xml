@@ -13,6 +13,14 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub YmirSonmez Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/YmirSonmez/MongoY</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.mongodb</groupId>
