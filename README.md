@@ -18,3 +18,12 @@ mongoy.exists("moneys","Ymir"); #Boolean
 mongoy.set("collection",YObject);
 mongo.set("collection",key,Object);
 ```
+
+### Maven
+```XML
+<dependency>
+    <groupId>me.ymir.mongoy</groupId>
+    <artifactId>mongoy</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
+```
