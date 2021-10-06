@@ -19,11 +19,23 @@ mongoy.set("collection",YObject);
 mongo.set("collection",key,Object);
 ```
 
+### V2 Features
+```JAVA
+new CaseInsensitiveString("text");
+
+MongoY mongoy = new MongoY("host",27017,"DB");
+
+mongoy.set("moneys","Ymir",5);
+mongoy.removeData("moneys",new CaseInsensitiveString("ymir"));
+mongoy.getInt("moneys",new CaseInsensitiveString("yMiR")); #Integer
+mongoy.exists("moneys",new CaseInsensitiveString("YMIR")); #Boolean
+```
+
 ### Maven
 ```XML
 <dependency>
     <groupId>me.ymir.mongoy</groupId>
     <artifactId>mongoy</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>2.0</version>
 </dependency>
 ```
