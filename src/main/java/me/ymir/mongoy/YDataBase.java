@@ -31,17 +31,17 @@ public class YDataBase{
         set(collection, object.getKey(), object);
     }
 
-    public void set(String collection, String key, Object object) {
+    public void set(String collection, Object key, Object object) {
         Document document;
         if (object instanceof Integer || object instanceof String || object instanceof Double || object instanceof Float || object instanceof Boolean || object instanceof List || object instanceof Map) {
-            document = new Document().append("key", key).append("value", object);
+            document = new Document().append("key", key instanceof CaseInsensitiveString ? key.toString() : key).append("value", object);
         } else {
             document = Document.parse(new Gson().toJson(object));
         }
         set(collection, key, document);
     }
 
-    public void set(String collection, String key, Document document) {
+    public void set(String collection, Object key, Document document) {
         setFinal(collection, key, document);
     }
 
@@ -50,19 +50,20 @@ public class YDataBase{
     }
 
     private void setFinal(String collection, Object key, Document document){
-        removeData(collection,key);
+        Document removed = removeData(collection,key);
+        if(removed != null) document.replace("key",removed.get("key"));
         this.database.getCollection(collection).insertOne(document);
     }
 
     //--------------------------------------
 
-    public void removeData(String collection, Object key) {
-        removeData(collection, "key", key);
+    public Document removeData(String collection, Object key) {
+        return removeData(collection, "key", key);
     }
 
-    public void removeData(String collection, String keyName, Object key) {
+    public Document removeData(String collection, String keyName, Object key) {
         DBObject dbObject = new BasicDBObject().append(keyName, key instanceof CaseInsensitiveString ? ((CaseInsensitiveString) key).compile() : key);
-        this.database.getCollection(collection).deleteOne((Bson) dbObject);
+        return this.database.getCollection(collection).findOneAndDelete((Bson) dbObject);
     }
 
     //--------------------------------------
