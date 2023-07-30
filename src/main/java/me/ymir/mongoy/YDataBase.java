@@ -14,10 +14,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class YDataBase{
+public class YDataBase {
     public MongoDatabase database;
 
-    protected void init(MongoDatabase database){
+    protected void init(MongoDatabase database) {
         this.database = database;
     }
 
@@ -46,12 +46,12 @@ public class YDataBase{
     }
 
     public void set(String collection, CaseInsensitiveString key, Document document) {
-        setFinal(collection,key,document);
+        setFinal(collection, key, document);
     }
 
-    private void setFinal(String collection, Object key, Document document){
-        Document removed = removeData(collection,key);
-        if(removed != null) document.replace("key",removed.get("key"));
+    private void setFinal(String collection, Object key, Document document) {
+        Document removed = removeData(collection, key);
+        if (removed != null) document.replace("key", removed.get("key"));
         this.database.getCollection(collection).insertOne(document);
     }
 
@@ -192,7 +192,7 @@ public class YDataBase{
     }
 
     public String getObjectJson(String collection, String keyName, Object key) {
-        Document doc = getDocument(collection,keyName,key);
+        Document doc = getDocument(collection, keyName, key);
         return doc == null ? "" : doc.toJson();
     }
 
@@ -205,7 +205,7 @@ public class YDataBase{
         return this.database.getCollection(collection).find((Bson) dbObject);
     }
 
-    public ArrayList<Document> getDocumentsAsList(String collection, String keyName, Object key){
+    public ArrayList<Document> getDocumentsAsList(String collection, String keyName, Object key) {
         ArrayList<Document> docs = new ArrayList<>();
         for (Document document : getDocuments(collection, keyName, key)) {
             docs.add(document);
