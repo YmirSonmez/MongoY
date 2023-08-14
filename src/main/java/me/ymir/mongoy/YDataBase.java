@@ -4,15 +4,14 @@ import com.google.gson.Gson;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
 import com.mongodb.client.FindIterable;
-import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 public class YDataBase {
     public MongoDatabase database;
@@ -215,36 +214,33 @@ public class YDataBase {
 
     //--------------------------------------
 
-    @Deprecated
+    @Deprecated(since = "2.3")
     public List<String> getStringList(String collection, String keyName, Object key, String value) {
         return getStringList(collection, keyName, key, value, null);
     }
 
-    @Deprecated
+    @Deprecated(since = "2.3")
     public List<String> getStringList(String collection, String keyName, Object key) {
         return getStringList(collection, keyName, key, "value", null);
     }
 
-    @Deprecated
+    @Deprecated(since = "2.3")
     public List<String> getStringList(String collection, Object key, List<String> defaultList) {
         return getStringList(collection, "key", key, "value", defaultList);
     }
 
-    @Deprecated
+    @Deprecated(since = "2.3")
     public List<String> getStringList(String collection, Object key) {
         return getStringList(collection, "key", key, "value", null);
     }
 
-    @Deprecated
+    @Deprecated(since = "2.3")
     public List<String> getStringList(String collection, String keyName, Object key, String value, List<String> defaultList) {
         if (exists(collection, keyName, key)) {
             Document doc = getDocument(collection, keyName, key);
             return new ArrayList<>(doc.getList(value, String.class));
         } else {
-            if (defaultList == null) {
-                return new ArrayList<>();
-            }
-            return defaultList;
+            return Objects.requireNonNullElseGet(defaultList, ArrayList::new);
         }
     }
 

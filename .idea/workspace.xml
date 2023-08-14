@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db186f27-bcd4-438d-a2c4-43165db599f5" name="Changes" comment="some improvements">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="db186f27-bcd4-438d-a2c4-43165db599f5" name="Changes" comment="Update README.md file">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/CaseInsensitiveString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/CaseInsensitiveString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/MongoY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/MongoY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/YDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/YDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/YObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/YObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +40,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true"
+    "git-widget-placeholder": "v2",
+    "ignore.virus.scanning.warn.message": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.ymir.mongoy.Test" />
@@ -90,14 +105,23 @@
       <option name="project" value="LOCAL" />
       <updated>1690713457253</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update README.md file">
+      <option name="closed" value="true" />
+      <created>1690713570517</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690713570517</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pom.xml update" />
     <MESSAGE value="Added a constructor to connect to MongoDB with a URI" />
     <MESSAGE value="some improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="some improvements" />
+    <MESSAGE value="Update README.md file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
