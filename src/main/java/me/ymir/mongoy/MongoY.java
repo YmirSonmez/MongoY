@@ -5,7 +5,6 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 
-@SuppressWarnings("unused")
 public class MongoY extends YDataBase {
     private final MongoClient mongo;
 

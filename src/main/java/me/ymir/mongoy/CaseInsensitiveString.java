@@ -1,18 +1,12 @@
 package me.ymir.mongoy;
 
+import lombok.AllArgsConstructor;
+
 import java.util.regex.Pattern;
 
+@AllArgsConstructor
 public class CaseInsensitiveString {
     private String string;
-
-    public CaseInsensitiveString(String string) {
-        this.string = string;
-    }
-
-    @Override
-    public String toString() {
-        return string;
-    }
 
     public Pattern compile() {
         return Pattern.compile(string, Pattern.CASE_INSENSITIVE);

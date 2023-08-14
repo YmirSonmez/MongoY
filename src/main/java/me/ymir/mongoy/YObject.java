@@ -1,17 +1,10 @@
 package me.ymir.mongoy;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@AllArgsConstructor
 public class YObject {
-    public String key;
-
-    public YObject(String key) {
-        this.key = key;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
+    @Getter @Setter private String key;
 }
