@@ -18,6 +18,12 @@ public class MongoY extends YDataBase {
         init(mongo.getDatabase(dbName));
     }
 
+    //Connects directly to localhost
+    public MongoY(String dbName){
+        this.mongo = new MongoClient("localhost", 27017);
+        init(mongo.getDatabase(dbName));
+    }
+
     //--------------------------------------
 
     public MongoCollection<Document> getCollection(String collection) {
