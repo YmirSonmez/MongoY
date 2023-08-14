@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db186f27-bcd4-438d-a2c4-43165db599f5" name="Changes" comment="Update README.md file">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="db186f27-bcd4-438d-a2c4-43165db599f5" name="Changes" comment="Connecting directly to localhost">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/CaseInsensitiveString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/CaseInsensitiveString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/MongoY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/MongoY.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/YDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/YDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/YObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/ymir/mongoy/YObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +109,31 @@
       <option name="project" value="LOCAL" />
       <updated>1690713570517</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Some improvements">
+      <option name="closed" value="true" />
+      <created>1692036940254</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692036940254</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update java version 8 to 11">
+      <option name="closed" value="true" />
+      <created>1692036966437</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1692036966437</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Connecting directly to localhost">
+      <option name="closed" value="true" />
+      <created>1692037152811</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1692037152811</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -121,7 +141,10 @@
     <MESSAGE value="Added a constructor to connect to MongoDB with a URI" />
     <MESSAGE value="some improvements" />
     <MESSAGE value="Update README.md file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md file" />
+    <MESSAGE value="Some improvements" />
+    <MESSAGE value="Update java version 8 to 11" />
+    <MESSAGE value="Connecting directly to localhost" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connecting directly to localhost" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

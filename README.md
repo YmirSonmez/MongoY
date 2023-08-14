@@ -4,6 +4,17 @@ Simple Mongo API
 ### Java Docs
 https://ymirsonmez.github.io/MongoY/
 
+### Latest Features
+
+- 2.4
+```JAVA
+//Connects localhost
+MongoY mongoy = new MongoY("DB");
+mongoy.removeData("moneys", "SwadeDev0");
+mongoy.getInt("moneys", "SwadeDev0"); #Integer
+mongoy.exists("moneys", "SwadeDev0"); #Boolean
+```
+
 ### Usage
 
 ```JAVA
@@ -36,6 +47,6 @@ mongoy.exists("moneys", new CaseInsensitiveString("YMIR")); #Boolean
 <dependency>
     <groupId>me.ymir.mongoy</groupId>
     <artifactId>mongoy</artifactId>
-    <version>2.3</version>
+    <version>2.4</version>
 </dependency>
 ```
