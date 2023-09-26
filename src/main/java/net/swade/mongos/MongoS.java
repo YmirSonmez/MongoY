@@ -1,25 +1,26 @@
-package me.ymir.mongoy;
+package net.swade.mongos;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 
-public class MongoY extends YDataBase {
+@SuppressWarnings("unused")
+public class MongoS extends Database {
     private final MongoClient mongo;
 
-    public MongoY(String host, int port, String dbName) {
+    public MongoS(String host, int port, String dbName) {
         this.mongo = new MongoClient(host, port);
         init(mongo.getDatabase(dbName));
     }
 
-    public MongoY(MongoClientURI uri, String dbName) {
+    public MongoS(MongoClientURI uri, String dbName) {
         this.mongo = new MongoClient(uri);
         init(mongo.getDatabase(dbName));
     }
 
     //Connects directly to localhost
-    public MongoY(String dbName){
+    public MongoS(String dbName){
         this.mongo = new MongoClient("localhost", 27017);
         init(mongo.getDatabase(dbName));
     }
@@ -30,8 +31,8 @@ public class MongoY extends YDataBase {
         return this.database.getCollection(collection);
     }
 
-    public YDataBase getAnotherDatabase(String dataBase) {
-        YDataBase db = new YDataBase();
+    public Database getAnotherDatabase(String dataBase) {
+        Database db = new Database();
         db.init(mongo.getDatabase(dataBase));
         return db;
     }

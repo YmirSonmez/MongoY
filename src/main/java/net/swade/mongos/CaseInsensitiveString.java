@@ -1,4 +1,4 @@
-package me.ymir.mongoy;
+package net.swade.mongos;
 
 import lombok.AllArgsConstructor;
 

@@ -1,41 +1,36 @@
-package me.ymir.mongoy;
+package net.swade.mongos;
 
 import com.google.gson.Gson;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoDatabase;
+import lombok.Getter;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
-public class YDataBase {
+@Getter
+@SuppressWarnings("unused")
+public class Database {
     public MongoDatabase database;
 
     protected void init(MongoDatabase database) {
         this.database = database;
     }
 
-    public MongoDatabase getDatabase() {
-        return database;
-    }
-
     //--------------------------------------
 
-    public void set(String collection, YObject object) {
-        set(collection, object.getKey(), object);
-    }
 
     public void set(String collection, Object key, Object object) {
         Document document;
-        if (object instanceof Integer || object instanceof String || object instanceof Double || object instanceof Float || object instanceof Boolean || object instanceof List || object instanceof Map) {
-            document = new Document().append("key", key instanceof CaseInsensitiveString ? key.toString() : key).append("value", object);
+        if (object instanceof MongoSObject){
+            document = new Document().append("key", key instanceof CaseInsensitiveString ? key.toString() : key).append("value", object.toString());
         } else {
-            document = Document.parse(new Gson().toJson(object));
+            document = new Document().append("key", key instanceof CaseInsensitiveString ? key.toString() : key).append("value", object);
         }
         set(collection, key, document);
     }
